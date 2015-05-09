@@ -1,10 +1,12 @@
 package hiroumi.seino.one_dish;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -12,6 +14,24 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button cookButton = (Button)this.findViewById(R.id.cookButton);
+        cookButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), CookActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button orderButton = (Button)this.findViewById(R.id.orderButton);
+        orderButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), OrderActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 

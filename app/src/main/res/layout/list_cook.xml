@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/icon"
+        android:paddingLeft="5dp"
+        android:paddingRight="25dp"
+        android:paddingTop="5dp"
+        android:text="名前名前名前名前名前名前名前名前"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/cal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_alignParentRight="true"
+        android:paddingRight="25dp"
+        android:text="cal" />
+
+</RelativeLayout>
