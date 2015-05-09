@@ -15,8 +15,10 @@ public class OrderReciptListFragment extends Fragment {
     @Override
     public View onCreateView( LayoutInflater inflater , ViewGroup group , Bundle savedInstanceState ){
 
-        GridView view = new GridView( getActivity().getBaseContext() );
-        //Todo:OrderReciptListAdapter adapter = new OrderReciptListAdapter( getActivity().getBaseContext() ,  );
+        View view =  inflater.inflate( R.layout.fragment_order_recipt_grid , null );
+        GridView grid = ( GridView ) view.findViewById( R.id.order_recipt_grid );
+        OrderReciptListAdapter adapter = new OrderReciptListAdapter( getActivity().getBaseContext() , R.layout.order_recipt_grid_item , 0 , null );
+        grid.setAdapter( adapter );
 
         return view;
     }

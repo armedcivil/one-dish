@@ -39,10 +39,27 @@ public class OrderReciptListAdapter extends ArrayAdapter {
         View view = convertView.findViewById(R.id.order_recipt_grid_item_text_layout);
         TextView title = ( TextView ) view.findViewById( R.id.order_recipt_grid_item_text_title );
         View inner = view.findViewById( R.id.order_recipt_grid_item_text_inner );
-        TextView time = ( TextView ) inner.findViewById( R.id.order_recipt_grid_item_text_time );
+        TextView price = ( TextView ) inner.findViewById( R.id.order_recipt_grid_item_text_price);
         TextView cal = ( TextView ) inner.findViewById( R.id.order_recipt_grid_item_text_cal );
 
-
+        switch( position ){
+            case 0:
+                image.setImageResource( R.drawable.taihuuyakitori );
+                title.setText( "タイ風焼き鳥" );
+                price.setText( "400円" );
+                cal.setText( "367kcal" );
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+        }
 
         return convertView;
     }
