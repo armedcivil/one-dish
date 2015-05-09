@@ -5,16 +5,17 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
-public class BlankFragment extends Fragment {
+public class OrderListFragment extends Fragment {
 
-    public static BlankFragment newInstance(String param1, String param2) {
-        BlankFragment fragment = new BlankFragment();
+    public static OrderListFragment newInstance(String param1, String param2) {
+        OrderListFragment fragment = new OrderListFragment();
         Bundle args = new Bundle();
         return fragment;
     }
 
-    public BlankFragment() {
+    public OrderListFragment() {
         // Required empty public constructor
     }
 
@@ -27,17 +28,19 @@ public class BlankFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_order_list, container, false);
+
+        ListView list = ( ListView ) view.findViewById( R.id.order_list );
 
 
-
-        return inflater.inflate(R.layout.fragment_blank, container, false);
+        return view;
     }
-/*
+//*
     @Override
-    public void onViewCreated( View view ){
+    public void onViewCreated( View view, Bundle savedInstanceState ){
 
 
 
     }
-*/
+//*/
 }
