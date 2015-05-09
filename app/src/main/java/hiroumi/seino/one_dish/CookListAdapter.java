@@ -34,7 +34,7 @@ public class CookListAdapter extends ArrayAdapter {
         holder.name.setText(name);
         holder.cal.setText(cal);
 
-        holder.icon.setImageResource(R.drawable.no_image);
+        holder.icon.setImageResource(R.drawable.ic_launcher);
 
         return convertView;
     }
