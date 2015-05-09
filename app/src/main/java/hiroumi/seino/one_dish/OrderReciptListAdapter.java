@@ -50,14 +50,34 @@ public class OrderReciptListAdapter extends ArrayAdapter {
                 cal.setText( "367kcal" );
                 break;
             case 1:
+                image.setImageResource( R.drawable.yasaiitame );
+                title.setText( "お家で簡単\n野菜炒め" );
+                price.setText( "320円" );
+                cal.setText( "241cal" );
                 break;
             case 2:
+                image.setImageResource( R.drawable.toriherb );
+                title.setText( "鶏の\nハーブ焼き" );
+                price.setText( "400円" );
+                cal.setText( "427kcal" );
                 break;
             case 3:
+                image.setImageResource( R.drawable.nasunobutanikumaki );
+                title.setText( "ナスの\n豚肉巻き" );
+                price.setText( "350円" );
+                cal.setText( "285kcal" );
                 break;
             case 4:
+                image.setImageResource( R.drawable.sasaminomenntaimayonikumaki );
+                title.setText( "ササミの\n明太子マヨ\n肉巻き" );
+                price.setText( "380円" );
+                cal.setText( "572kcal" );
                 break;
             case 5:
+                image.setImageResource( R.drawable.juusiitikinn );
+                title.setText( "ジューシー\nチキン" );
+                price.setText( "400円" );
+                cal.setText( "381kcal" );
                 break;
         }
 

@@ -4,5 +4,6 @@
     <color name="serizawa_red">#a12224</color>
     <color name="serizawa_black">#59493f</color>
     <color name="serizawa_grey">#eee</color>
+    <color name="pressed_color">#55ff2224</color>
 
 </resources>
