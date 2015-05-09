@@ -7,15 +7,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-public class OrderListFragment extends Fragment {
+public class OrderGenreListFragment extends Fragment {
 
-    public static OrderListFragment newInstance(String param1, String param2) {
-        OrderListFragment fragment = new OrderListFragment();
+    public static OrderGenreListFragment newInstance(String param1, String param2) {
+        OrderGenreListFragment fragment = new OrderGenreListFragment();
         Bundle args = new Bundle();
         return fragment;
     }
 
-    public OrderListFragment() {
+    public OrderGenreListFragment() {
         // Required empty public constructor
     }
 
@@ -30,8 +30,9 @@ public class OrderListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_order_list, container, false);
 
-        ListView list = ( ListView ) view.findViewById( R.id.order_list );
-
+        ListView list = ( ListView ) view.findViewById( R.id.order_genre_list);
+        OrderGenreListAdapter adapter = new OrderGenreListAdapter( getActivity().getBaseContext() , R.layout.order_genre_list_item , 0 , null );
+        list.setAdapter( adapter );
 
         return view;
     }

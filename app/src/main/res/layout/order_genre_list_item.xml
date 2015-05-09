@@ -16,6 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
+
         <ImageView
             android:id="@+id/order_genre_list_item_inner_image"
             android:layout_width="wrap_content"

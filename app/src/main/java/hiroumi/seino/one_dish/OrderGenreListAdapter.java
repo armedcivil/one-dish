@@ -11,7 +11,6 @@ import android.widget.TextView;
 import java.util.List;
 
 public class OrderGenreListAdapter extends ArrayAdapter {
-    private static final String TAG = OrderGenreListAdapter.class.getSimpleName();
     private LayoutInflater inflater;
 
     public OrderGenreListAdapter(Context context, int resource, int textViewResourceId, List objects) {
@@ -21,7 +20,6 @@ public class OrderGenreListAdapter extends ArrayAdapter {
 
     @Override
     public int getCount(  ){
-
 
         return 5;
     }
