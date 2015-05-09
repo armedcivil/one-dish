@@ -23,8 +23,8 @@
         android:id="@+id/cal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/name"
         android:layout_alignParentRight="true"
+        android:layout_below="@+id/name"
         android:paddingRight="25dp"
         android:text="cal" />
 

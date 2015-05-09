@@ -9,13 +9,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class CookListAdapter extends ArrayAdapter {
+public class CookSelectListAdapter extends ArrayAdapter {
 
     private LayoutInflater inflater;
     private String name = "ハンバーグ";
-    private String cal = "20kCal.";
+    private String cal = "800kCal.";
 
-    public CookListAdapter(Context context) {
+    public CookSelectListAdapter(Context context) {
         super(context, android.R.layout.simple_list_item_1);
         inflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
     }
@@ -24,7 +24,7 @@ public class CookListAdapter extends ArrayAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.list_cook, null);
+            convertView = inflater.inflate(R.layout.cook_list_item, null);
             holder = new ViewHolder(convertView);
             convertView.setTag(holder);
         }else {
