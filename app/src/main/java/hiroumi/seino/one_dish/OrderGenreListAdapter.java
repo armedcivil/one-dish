@@ -27,7 +27,7 @@ public class OrderGenreListAdapter extends ArrayAdapter {
     @Override
     public View getView( int position , View convert , ViewGroup group ){
         if( convert == null ){
-            convert = inflater.inflate( R.layout.order_recipt_list_item, group );
+            convert = inflater.inflate( R.layout.order_genre_list_item, null );
         }
 
         View inner = convert.findViewById( R.id.order_genre_list_item_inner_layout );
