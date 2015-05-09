@@ -1,7 +1,5 @@
 package hiroumi.seino.one_dish;
 
-import android.app.Activity;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -34,12 +32,12 @@ public class BlankFragment extends Fragment {
 
         return inflater.inflate(R.layout.fragment_blank, container, false);
     }
-
+/*
     @Override
     public void onViewCreated( View view ){
 
 
 
     }
-
+*/
 }
