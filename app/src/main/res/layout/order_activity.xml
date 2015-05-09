@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/order_recipt_grid_fragment"
-        class="hiroumi.seino.one_dish.OrderReciptListFragment"
+        class="hiroumi.seino.one_dish.OrderDetailFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
