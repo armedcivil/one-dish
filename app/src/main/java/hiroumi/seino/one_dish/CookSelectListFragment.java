@@ -29,7 +29,7 @@ public class CookSelectListFragment extends ListFragment {
                 // クリックされたアイテムを取得
                 String item = (String) listView.getItemAtPosition(position);
                 //~~
-                int menuId=0;
+                int menuId = 0;
                 //メニューのIDを渡す
 
                 //~~
@@ -41,7 +41,7 @@ public class CookSelectListFragment extends ListFragment {
         CookSelectListAdapter cookSelectListAdapter = new CookSelectListAdapter(getActivity());
         setListAdapter(cookSelectListAdapter);
         int i=0;
-        while (i<=10) {
+        while (i<10) {
             cookSelectListAdapter.add(null);
             i++;
         }
