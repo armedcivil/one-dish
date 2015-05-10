@@ -49,7 +49,7 @@ public class OrderActivity extends ActionBarActivity {
         int id = item.getItemId();
         switch (id) {
             case R.id.action_cart:
-                Toast.makeText(this, "カートに追加しました", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "購入しました", Toast.LENGTH_LONG).show();
                 getSupportFragmentManager().popBackStack();
                 getSupportFragmentManager().popBackStack();
                 return true;
