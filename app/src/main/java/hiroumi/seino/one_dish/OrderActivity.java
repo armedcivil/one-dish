@@ -36,9 +36,17 @@ public class OrderActivity extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         actionBar.setDisplayHomeAsUpEnabled(true);
-        getMenuInflater().inflate(R.menu.menu_order, menu);
-        if(menuType == 0){}
-        else{
+        if(menuType == 0){
+            actionBar.setTitle("食材を買う");
+            getMenuInflater().inflate(R.menu.menu_order_no_item, menu);
+        }
+        else if(menuType == 1){
+            actionBar.setTitle("お肉");
+            getMenuInflater().inflate(R.menu.menu_order_no_item, menu);
+        }
+        else if(menuType == 2){
+            actionBar.setTitle("お家で簡単　野菜炒め");
+            getMenuInflater().inflate(R.menu.menu_order, menu);
         }
         return true;
     }
@@ -73,15 +81,19 @@ public class OrderActivity extends ActionBarActivity {
         switch (num) {
             case GENRE:
                 transaction.addToBackStack(null);
+                menuType = 0;
                 transaction.add(R.id.fragment_container, orderGenreListFragment);
+                invalidateOptionsMenu();
                 break;
             case RECIPT:
                 transaction.addToBackStack(null);
+                menuType = 1;
                 transaction.add(R.id.fragment_container, orderReciptListFragment);
+                invalidateOptionsMenu();
                 break;
             case DETAIL:
                 transaction.addToBackStack(null);
-                menuType = 1;
+                menuType = 2;
                 transaction.add(R.id.fragment_container, orderDetailFragment);
                 invalidateOptionsMenu();
                 break;
@@ -97,6 +109,9 @@ public class OrderActivity extends ActionBarActivity {
         }
         else {
             getSupportFragmentManager().popBackStack();
+            if(menuType!=0){
+                menuType--;
+            }
             invalidateOptionsMenu();
         }
     }

@@ -14,6 +14,7 @@ public class CookActivity extends ActionBarActivity {
      */
     private final static int LIST = 100;
     public final static int PLAN = 200;
+    private int menuType = 0;
 
     private ActionBar actionBar;
 
@@ -32,6 +33,12 @@ public class CookActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         actionBar.setDisplayHomeAsUpEnabled(true);
+        if(menuType == 0){
+            actionBar.setTitle("料理する");
+        }
+        else if(menuType == 1){
+            actionBar.setTitle("ジューシーチキン");
+        }
         return true;
     }
 
@@ -60,10 +67,14 @@ public class CookActivity extends ActionBarActivity {
         switch (num) {
             case LIST:
                 transaction.addToBackStack(null);
+                menuType=0;
+                invalidateOptionsMenu();
                 transaction.add(R.id.fragment_container, cookSelectListFragment);
                 break;
             case PLAN:
                 transaction.addToBackStack(null);
+                menuType=1;
+                invalidateOptionsMenu();
                 transaction.add(R.id.fragment_container, cookPlanFragment);
                 break;
             default:
@@ -78,6 +89,9 @@ public class CookActivity extends ActionBarActivity {
         }
         else {
             getSupportFragmentManager().popBackStack();
+            if(menuType!=0){
+                menuType--;
+            }
             invalidateOptionsMenu();
         }
     }
