@@ -60,6 +60,7 @@ public class OrderActivity extends ActionBarActivity {
                 Toast.makeText(this, "購入しました", Toast.LENGTH_LONG).show();
                 getSupportFragmentManager().popBackStack();
                 getSupportFragmentManager().popBackStack();
+                menuType=0;
                 return true;
             case android.R.id.home:
                 onBackPressed();

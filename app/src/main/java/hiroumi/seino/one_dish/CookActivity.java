@@ -20,6 +20,7 @@ public class CookActivity extends ActionBarActivity {
 
     CookSelectListFragment cookSelectListFragment = new CookSelectListFragment();
     CookPlanFragment cookPlanFragment = new CookPlanFragment();
+    OrderDetailFragment orderDetailFragment = new OrderDetailFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +36,15 @@ public class CookActivity extends ActionBarActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         if(menuType == 0){
             actionBar.setTitle("料理する");
+            getMenuInflater().inflate(R.menu.menu_cook, menu);
         }
         else if(menuType == 1){
             actionBar.setTitle("ジューシーチキン");
+            getMenuInflater().inflate(R.menu.menu_cook_icon, menu);
+        }
+        else if(menuType == 2){
+            actionBar.setTitle("ジューシーチキン");
+            getMenuInflater().inflate(R.menu.menu_cook, menu);
         }
         return true;
     }
@@ -47,6 +54,9 @@ public class CookActivity extends ActionBarActivity {
 
         int id = item.getItemId();
         switch (id) {
+            case R.id.action:
+                setFragment(3,0);
+            return true;
             case android.R.id.home:
                 onBackPressed();
                 return true;
@@ -72,6 +82,12 @@ public class CookActivity extends ActionBarActivity {
                 transaction.add(R.id.fragment_container, cookSelectListFragment);
                 break;
             case PLAN:
+                transaction.addToBackStack(null);
+                menuType=1;
+                invalidateOptionsMenu();
+                transaction.add(R.id.fragment_container, orderDetailFragment);
+                break;
+            case 3:
                 transaction.addToBackStack(null);
                 menuType=1;
                 invalidateOptionsMenu();
