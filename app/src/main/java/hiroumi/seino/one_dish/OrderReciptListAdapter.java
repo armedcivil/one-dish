@@ -44,16 +44,16 @@ public class OrderReciptListAdapter extends ArrayAdapter {
 
         switch( position ){
             case 0:
-                image.setImageResource( R.drawable.taihuuyakitori );
-                title.setText( "タイ風焼き鳥" );
-                price.setText( "400円" );
-                cal.setText( "367kcal" );
-                break;
-            case 1:
                 image.setImageResource( R.drawable.yasaiitame );
                 title.setText( "お家で簡単\n野菜炒め" );
                 price.setText( "320円" );
                 cal.setText( "241cal" );
+                break;
+            case 1:
+                image.setImageResource( R.drawable.taihuuyakitori );
+                title.setText( "タイ風焼き鳥" );
+                price.setText( "400円" );
+                cal.setText( "367kcal" );
                 break;
             case 2:
                 image.setImageResource( R.drawable.toriherb );

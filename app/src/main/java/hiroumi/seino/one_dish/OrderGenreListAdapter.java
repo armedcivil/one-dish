@@ -13,15 +13,9 @@ public class OrderGenreListAdapter extends ArrayAdapter {
 
     private LayoutInflater inflater;
 
-<<<<<<< HEAD
     public OrderGenreListAdapter(Context context) {
         super(context, android.R.layout.simple_list_item_1);
         inflater = (LayoutInflater) context.getSystemService( Activity.LAYOUT_INFLATER_SERVICE );
-=======
-    public OrderGenreListAdapter( Context context, int resource, int textViewResourceId, List objects ) {
-        super(context, resource, textViewResourceId, objects);
-        inflater = (LayoutInflater) context.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
->>>>>>> 08a1f493f5a68c18a9a20de8bec8484d9daf1dbd
     }
 
 //    @Override
@@ -42,30 +36,29 @@ public class OrderGenreListAdapter extends ArrayAdapter {
         switch( position ){
             case 0:
                 text.setText( "お肉" );
-                image.setImageResource( R.drawable.ic_launcher );
+                image.setImageResource( R.drawable.ic_bone_72 );
                 break;
 
             case 1:
                 text.setText( "お魚" );
-                image.setImageResource( R.drawable.ic_launcher );
+                image.setImageResource( R.drawable.ic_fish_72 );
                 break;
 
             case 2:
                 text.setText( "野菜" );
-                image.setImageResource( R.drawable.ic_launcher );
+                image.setImageResource( R.drawable.ic_carrot_72 );
                 break;
 
             case 3:
                 text.setText( "たまご" );
-                image.setImageResource( R.drawable.ic_launcher );
+                image.setImageResource( R.drawable.ic_egg_72 );
                 break;
 
             case 4:
                 text.setText( "汁物・スープ" );
-                image.setImageResource( R.drawable.ic_launcher );
+                image.setImageResource( R.drawable.ic_jpy_72 );
                 break;
         }
-
         return convert;
     }
 //*/

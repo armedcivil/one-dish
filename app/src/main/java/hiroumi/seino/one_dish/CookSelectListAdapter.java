@@ -12,8 +12,8 @@ import android.widget.TextView;
 public class CookSelectListAdapter extends ArrayAdapter {
 
     private LayoutInflater inflater;
-    private String name = "ハンバーグ";
-    private String cal = "800kCal.";
+    private String name = "お家で簡単\n野菜炒め";
+    private String cal = "367kCal.";
 
     public CookSelectListAdapter(Context context) {
         super(context, android.R.layout.simple_list_item_1);
@@ -34,7 +34,7 @@ public class CookSelectListAdapter extends ArrayAdapter {
         holder.name.setText(name);
         holder.cal.setText(cal);
 
-        holder.icon.setImageResource(R.drawable.ic_launcher);
+        holder.icon.setImageResource(R.drawable.yasaiitame);
 
         return convertView;
     }

@@ -32,7 +32,6 @@ public class CookActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         actionBar.setDisplayHomeAsUpEnabled(true);
-        getMenuInflater().inflate(R.menu.menu_cook, menu);
         return true;
     }
 
