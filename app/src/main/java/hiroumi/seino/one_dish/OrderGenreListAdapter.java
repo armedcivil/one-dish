@@ -13,7 +13,7 @@ import java.util.List;
 public class OrderGenreListAdapter extends ArrayAdapter {
     private LayoutInflater inflater;
 
-    public OrderGenreListAdapter(Context context, int resource, int textViewResourceId, List objects) {
+    public OrderGenreListAdapter( Context context, int resource, int textViewResourceId, List objects ) {
         super(context, resource, textViewResourceId, objects);
         inflater = (LayoutInflater) context.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
     }
