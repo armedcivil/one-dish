@@ -13,9 +13,15 @@ public class OrderGenreListAdapter extends ArrayAdapter {
 
     private LayoutInflater inflater;
 
+<<<<<<< HEAD
     public OrderGenreListAdapter(Context context) {
         super(context, android.R.layout.simple_list_item_1);
         inflater = (LayoutInflater) context.getSystemService( Activity.LAYOUT_INFLATER_SERVICE );
+=======
+    public OrderGenreListAdapter( Context context, int resource, int textViewResourceId, List objects ) {
+        super(context, resource, textViewResourceId, objects);
+        inflater = (LayoutInflater) context.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
+>>>>>>> 08a1f493f5a68c18a9a20de8bec8484d9daf1dbd
     }
 
 //    @Override

@@ -31,7 +31,6 @@ public class CookActivity extends ActionBarActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         actionBar.setDisplayHomeAsUpEnabled(true);
         getMenuInflater().inflate(R.menu.menu_cook, menu);
         return true;
